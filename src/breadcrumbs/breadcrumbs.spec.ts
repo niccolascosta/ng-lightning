@@ -19,14 +19,24 @@ describe('Breadcrumbs Component', () => {
 
   beforeEach(() => TestBed.configureTestingModule({declarations: [TestComponent], imports: [NglBreadcrumbsModule]}));
 
+  it('should have the proper structure when rendered', () => {
+    const fixture = createTestComponent();
+    const anchors = getBreadcrumbsLinks(fixture.nativeElement);
+
+    anchors.map(el => el.parentElement).forEach(parentEl => {
+      expect(parentEl.tagName).toBe('LI');
+      expect(parentEl).toHaveCssClass('slds-breadcrumb__item');
+      expect(parentEl.parentElement.tagName).toBe('OL');
+    });
+  });
+
   it('should have anchor across the path', () => {
     const fixture = createTestComponent();
-    const anchors: HTMLLinkElement[] = getBreadcrumbsLinks(fixture.nativeElement);
+    const anchors = getBreadcrumbsLinks(fixture.nativeElement);
 
-    fixture.detectChanges();
     expect(anchors.map(el => el.getAttribute('href'))).toEqual(['/here', '/there']);
     expect(anchors.map(el => el.textContent)).toEqual(['Here I am!', 'There I was!']);
-    anchors.forEach(el => expect(el.parentElement).toHaveCssClass('slds-list__item'));
+    expect(anchors.map(el => el.classList.toString())).toEqual(['custom', '']);
   });
 
   it('should render assistive text correctly', () => {
@@ -39,8 +49,8 @@ describe('Breadcrumbs Component', () => {
 @Component({
   template: `
     <ngl-breadcrumbs [assistiveText]="text">
-      <ngl-breadcrumb href="/here">Here I am!</ngl-breadcrumb>
-      <ngl-breadcrumb href="/there">There I was!</ngl-breadcrumb>
+      <a *nglBreadcrumb href="/here" class="custom">Here I am!</a>
+      <a *nglBreadcrumb href="/there">There I was!</a>
     </ngl-breadcrumbs>`,
 })
 export class TestComponent {
