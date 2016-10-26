@@ -1,3 +1,37 @@
+<a name="0.26.0"></a>
+# [0.26.0](https://github.com/ng-lightning/ng-lightning/compare/v0.25.0...v0.26.0) (2016-10-26)
+
+
+### Bug Fixes
+
+* **breadcrumbs:** support `routerLink` on each breadcrumb ([e978ed6](https://github.com/ng-lightning/ng-lightning/commit/e978ed6)), closes [#248](https://github.com/ng-lightning/ng-lightning/issues/248)
+* **popovers:** position after popover view is initialized ([1259247](https://github.com/ng-lightning/ng-lightning/commit/1259247)), closes [#251](https://github.com/ng-lightning/ng-lightning/issues/251)
+
+
+### Features
+
+* **rating:** expose `fill` value in custom template icons ([931359c](https://github.com/ng-lightning/ng-lightning/commit/931359c)), closes [#247](https://github.com/ng-lightning/ng-lightning/issues/247)
+* **rating:** support fractional values ([6aba289](https://github.com/ng-lightning/ng-lightning/commit/6aba289)), closes [#229](https://github.com/ng-lightning/ng-lightning/issues/229)
+
+
+### BREAKING CHANGES
+
+* breadcrumbs: breadcrumb is now a structural directive
+
+  Before:
+
+  ```html
+  <ngl-breadcrumb href="...">...</ngl-breadcrumb>
+  ```
+
+  After:
+
+  ```html
+  <a *nglBreadcrumb href="...">...</a>
+  ```
+
+
+
 <a name="0.25.0"></a>
 # [0.25.0](https://github.com/ng-lightning/ng-lightning/compare/v0.24.0...v0.25.0) (2016-10-15)
 
