@@ -5,6 +5,7 @@ import * as Tether from 'tether';
 import 'rxjs/add/operator/take';
 import {NglPopover, Direction} from './popover';
 import {placement} from './placements';
+import {toBoolean} from '../util/util';
 
 @Directive({
   selector: '[nglPopover]',
@@ -31,7 +32,12 @@ export class NglPopoverTrigger {
     [this.openDelay, this.closeDelay] = delay.map(Number);
   }
 
-  @Input() nglInteractive = false;
+  @Input() set nglInteractive(interactive: boolean | string) {
+    this.interactive = toBoolean(interactive);
+  }
+  get nglInteractive() {
+    return this.interactive;
+  }
 
   @Input() set nglOpen(open: boolean) {
     this.toggle(open, open ? this.openDelay : this.closeDelay);
@@ -49,6 +55,7 @@ export class NglPopoverTrigger {
   private openDelay = 0;
   private closeDelay = 0;
   private toggleTimeout: any = null;
+  private interactive = false;
   private interactiveSubscription: any = null;
 
   constructor(private element: ElementRef, private viewContainer: ViewContainerRef, private injector: Injector,

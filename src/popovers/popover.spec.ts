@@ -218,7 +218,7 @@ describe('Popovers', () => {
   });
 
   it('should support interaction with content', fakeAsync(() => {
-    const fixture = createTestComponent('<div nglInteractive="true" [nglPopoverDelay]="[0, 200]" nglPopover="tip" [nglOpen]="open"></div>');
+    const fixture = createTestComponent('<div nglInteractive [nglPopoverDelay]="[0, 200]" nglPopover="tip" [nglOpen]="open"></div>');
 
     const popoverElement = getPopoverElement(fixture.nativeElement);
     expect(popoverElement).toBeTruthy();
