@@ -1,3 +1,20 @@
+<a name="0.27.0"></a>
+# [0.27.0](https://github.com/ng-lightning/ng-lightning/compare/v0.26.0...v0.27.0) (2016-10-27)
+
+
+### Bug Fixes
+
+* **popovers:** `nglInteractive` is handled as boolean ([01e4981](https://github.com/ng-lightning/ng-lightning/commit/01e4981))
+* **popovers:** `nglPopoverBehavior` makes host focusable by default ([40e1d5b](https://github.com/ng-lightning/ng-lightning/commit/40e1d5b))
+
+
+### Features
+
+* **popovers:** support interaction with content ([cbef50d](https://github.com/ng-lightning/ng-lightning/commit/cbef50d)), closes [#254](https://github.com/ng-lightning/ng-lightning/issues/254)
+* **rating:** support on/off color to be configurable ([f314e06](https://github.com/ng-lightning/ng-lightning/commit/f314e06)), closes [#253](https://github.com/ng-lightning/ng-lightning/issues/253)
+
+
+
 <a name="0.26.0"></a>
 # [0.26.0](https://github.com/ng-lightning/ng-lightning/compare/v0.25.0...v0.26.0) (2016-10-26)
 
