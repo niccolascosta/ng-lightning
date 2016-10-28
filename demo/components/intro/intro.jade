@@ -1,4 +1,4 @@
-mixin prism(html) 
+mixin prism(html)
   pre.language-bash
     code.language-bash(ngNonBindable)!= html
 
@@ -15,19 +15,19 @@ mixin prism(html)
   .slds-grid.slds-wrap
     .slds-col--padded.slds-text-align--center.slds-size--1-of-1.slds-large-size--1-of-3.slds-m-top--medium
       .slds-text-heading--medium BUILDING FOR THE FUTURE
-      .slds-m-top--small 
-        | Built upon next generation frameworks like 
-        b: a(href="https://angular.io/") Angular 2 
-        | and 
+      .slds-m-top--small
+        | Built upon next generation frameworks like
+        b: a(href="https://angular.io/") Angular 2
+        | and
         b: a(href="https://www.lightningdesignsystem.com/") Salesforce's Lightning Design System
         | , rest ​assured that you building an application to stand the test of time.
     .slds-col--padded.slds-text-align--center.slds-size--1-of-1.slds-large-size--1-of-3.slds-m-top--medium
       .slds-text-heading--medium BEST PRACTICES
-      .slds-m-top--small 
+      .slds-m-top--small
         | We focus on building stateless functional components that depend only on their input properties, guaranteeing better performance, more development flexibility and seamless integration with your application's requirements.
     .slds-col--padded.slds-text-align--center.slds-size--1-of-1.slds-large-size--1-of-3.slds-m-top--medium
       .slds-text-heading--medium  ACCESSIBILITY
-      .slds-m-top--small 
+      .slds-m-top--small
         | We put a lot of effort to follow Lightning Design System's accessibility guidelines, to assure that your product is operable by people with a wide range of abilities
         | and meets all legal requirements.
 
@@ -35,13 +35,13 @@ mixin prism(html)
 
   .slds-p-vertical--large
     .slds-text-heading--large.slds-m-bottom--large Getting started
-    p.slds-m-bottom--small 
-      | Install through 
+    p.slds-m-bottom--small
+      | Install through
       code npm
       | :
     +prism(install)
-      
-    p.slds-m-top--large.slds-m-bottom--small 
+
+    p.slds-m-top--large.slds-m-bottom--small
       | If you use&nbsp;
       strong SystemJS
       | &nbsp;to load your files, you should adjust your configuration to point our UMD bundle through&nbsp;
@@ -52,22 +52,22 @@ mixin prism(html)
 
   .slds-p-vertical--x-small
     .slds-text-heading--large.slds-m-bottom--large Reading the documentation
-    p 
-      | Each component has API documentation, examples, and a working demo. They can be found&nbsp; 
+    p
+      | Each component has API documentation, examples, and a working demo. They can be found&nbsp;
       a([routerLink]="['/components']") here
       | .
 
   .slds-p-vertical--large
     .slds-text-heading--large.slds-m-bottom--large Usage
-    p 
+    p
       | Once installed you need to import our main module into your application module by calling&nbsp;
       code NglModule.forRoot()
       | . You should end up with code similar to this:
     +prism(usageApp)
-      
+
   .slds-p-vertical--large
     .slds-text-heading--large.slds-m-bottom--large Configuration
-    p 
+    p
       | Optionally, you can pass an object to the&nbsp;
       code forRoot
       | &nbsp;method, to configure&nbsp;
@@ -76,13 +76,10 @@ mixin prism(html)
       | For example:
     +prism(config)
     p.slds-m-top--small
-      | Currently available options are:
-    ul.slds-list--dotted
-      li 
-        b svgPath
-        | : path to SVG sprites. Default is&nbsp;
-        code assets/icons
-        
+      | Currently available options can be found&nbsp;
+      a(href="https://github.com/ng-lightning/ng-lightning/blob/master/src/config/config.interface.ts") here
+      | .
+
     p.slds-m-top--large
       | If you want to change some config properties during runtime, you can easily achieve it by utilizing the&nbsp;
       code update
