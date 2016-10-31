@@ -1,5 +1,5 @@
 mixin code-preview(comp)
-  ngl-tabs( [(selected)]=`selectedTab['${comp.key}']`)
+  ngl-tabs( [(selected)]='selectedTab[\'' +  comp.key + '\']')
     template(ngl-tab, heading="Markup")
       pre.language-html
         code.language-html(ngNonBindable)!= comp.html
@@ -18,7 +18,7 @@ mixin code-preview(comp)
       section.slds-m-top--x-large(id=comp.key)
         h1.slds-text-heading--large
           | #{comp.title}
-          button.slds-button.slds-button--neutral.slds-button--small((click)=`playground.open(getComponent('${comp.key}'))`, style="float:right; font-size:small;")
+          button.slds-button.slds-button--neutral.slds-button--small((click)='open(playground, \'' + comp.key + '\')', style="float:right; font-size:small;")
             | TRY IN PLUNKER
         hr.slds-m-top--small.slds-m-bottom--large
         .slds-grid

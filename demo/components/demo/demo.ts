@@ -81,7 +81,11 @@ components.forEach(component => {
 export class DemoRoute {
   selectedTab: string[] = [];
 
-  getComponent(key: string): IComponent {
+  open(playground: any, key: string) {
+    playground.open(this.getComponent(key));
+  }
+
+  private getComponent(key: string): IComponent {
     for (var i = 0, ii = components.length; i < ii; i++) {
       if (components[i].key === key) {
         return components[i];

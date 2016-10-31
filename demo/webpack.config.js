@@ -21,7 +21,7 @@ const config = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   },
-  devtool: 'source-map',
+  devtool: isProduction ? 'source-map' : 'eval-source-map',
   resolve: {
     extensions: ['', '.ts',  '.js'],
     alias: {

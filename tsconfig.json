@@ -7,7 +7,6 @@
     "experimentalDecorators": true,
     "removeComments": true,
     "sourceMap": true,
-    "outDir": "./dist",
     "declaration": true
   },
   "compileOnSave": false,
