@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 
 @Component({
   selector: 'demo-images',
-  template: require('./images.html'),
+  templateUrl: './images.html',
 })
 export class DemoAvatars {
   type = 'rectangle';

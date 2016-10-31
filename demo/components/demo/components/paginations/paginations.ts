@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 
 @Component({
   selector: 'demo-paginations',
-  template: require('./paginations.html'),
+  templateUrl: './paginations.html',
 })
 export class DemoPaginations {
   total = 172;

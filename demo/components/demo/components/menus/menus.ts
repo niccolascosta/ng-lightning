@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 
 @Component({
   selector: 'demo-menus',
-  template: require('./menus.html'),
+  templateUrl: './menus.html',
 })
 export class DemoMenus {
   open: boolean;

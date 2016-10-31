@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 
 @Component({
   selector: 'demo-notifications',
-  template: require('./notifications.html'),
+  templateUrl: './notifications.html',
 })
 export class DemoNotifications {
   showAlert = false;

@@ -31,8 +31,8 @@ const config = {
   },
   module: {
     loaders: [
-      { test: /\.ts$/, loaders: ['ts'] },
-      { test: /\.jade$/, loaders: ['jade'] },
+      { test: /\.ts$/, loaders: ['ts', 'angular2-template'] },
+      { test: /\.(pug|jade)$/, loaders: ['pug'] },
       { test: /\.html$/, loaders: ['raw'] },
       { test: /\.md$/, loader: 'html?minimize=false!markdown' },
     ]
@@ -49,7 +49,7 @@ const config = {
       verbose: true,
     }),
     new HtmlWebpackPlugin({
-      template: '!!jade!' + path.resolve(__dirname, 'index.jade'),
+      template: path.resolve(__dirname, 'index.jade'),
       baseHref: isProduction ? '/ng-lightning/' : '/',
     }),
     new webpack.DefinePlugin({

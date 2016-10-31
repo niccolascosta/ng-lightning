@@ -1,6 +1,8 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-import {routing} from './routes';
+
+import {RouterModule} from '@angular/router';
+import {routes} from './app.routing';
 
 import {NglModule} from 'ng-lightning/ng-lightning';
 
@@ -14,7 +16,7 @@ import {SupportComponent} from './components/support/support';
 @NgModule({
   imports: [
     BrowserModule,
-    routing,
+    RouterModule.forRoot(routes, { useHash: true }),
     NglModule.forRoot(),
     NglDemoComponentsModule,
   ],

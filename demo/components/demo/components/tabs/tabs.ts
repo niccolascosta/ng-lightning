@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 
 @Component({
   selector: 'demo-tabs',
-  template: require('./tabs.html'),
+  templateUrl: './tabs.html',
 })
 export class DemoTabs {
 

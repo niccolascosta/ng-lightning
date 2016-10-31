@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 
 @Component({
   selector: 'demo-modals',
-  template: require('./modals.html'),
+  templateUrl: './modals.html',
 })
 export class DemoModals {
 

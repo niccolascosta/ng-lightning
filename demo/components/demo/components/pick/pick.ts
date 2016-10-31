@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'demo-pick',
-  template: require('./pick.html'),
+  templateUrl: './pick.html',
 })
 export class DemoPick {
   selected = 'middle';

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'demo-pills',
-  template: require('./pills.html'),
+  templateUrl: './pills.html',
 })
 export class DemoPills {
   private pillCounter = 1;

@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 
 @Component({
   selector: 'demo-buttons',
-  template: require('./buttons.html'),
+  templateUrl: './buttons.html',
 })
 export class DemoButtons {
 

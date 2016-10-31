@@ -11,7 +11,7 @@ const DATA = [
 
 @Component({
   selector: 'demo-datatables',
-  template: require('./datatables.html'),
+  templateUrl: './datatables.html',
 })
 export class DemoDatatables {
 

@@ -5,7 +5,7 @@ import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'demo-lookups',
-  template: require('./lookups.html'),
+  templateUrl: './lookups.html',
 })
 export class DemoLookups {
 

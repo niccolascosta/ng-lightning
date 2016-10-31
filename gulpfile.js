@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var ts = require('gulp-typescript');
 var tsProject = ts.createProject('tsconfig.json');
 var lazypipe = require('lazypipe');
-var jade = require('jade');
+var pug = require('pug');
 var inlineTemplates = require('gulp-inline-ng2-template');
 var cache = require('gulp-cached');
 var argv = require('yargs')
@@ -25,7 +25,7 @@ var inlineTemplatesTask = lazypipe()
     base: '/src',
     useRelativePaths: true,
     templateProcessor: function(filepath, ext, file, cb) {
-      const rendered = jade.render(file, {
+      const rendered = pug.render(file, {
         doctype: 'html',
         filename: filepath,
       });

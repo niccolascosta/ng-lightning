@@ -1,4 +1,4 @@
-import {Routes, RouterModule} from '@angular/router';
+import {Routes} from '@angular/router';
 
 import {IntroComponent} from './components/intro/intro';
 import {DemoRoute} from './components/demo/demo';
@@ -9,5 +9,3 @@ export const routes: Routes = [
   { path: 'components', component: DemoRoute},
   { path: 'support', component: SupportComponent},
 ];
-
-export const routing: any = RouterModule.forRoot(routes, {useHash: true});

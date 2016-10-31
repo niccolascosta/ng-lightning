@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 
 @Component({
   selector: 'demo-spinners',
-  template: require('./spinners.html'),
+  templateUrl: './spinners.html',
 })
 export class DemoSpinners {
 

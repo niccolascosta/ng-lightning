@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 
 @Component({
   selector: 'demo-ratings',
-  template: require('./ratings.html'),
+  templateUrl: './ratings.html',
 })
 export class DemoRatings {
   value = 3;

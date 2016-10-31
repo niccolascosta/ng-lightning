@@ -10,22 +10,27 @@ export class Plunker {
 
   index() {
     if (!this.component) return '';
-    return require('!!jade?pretty=true!./files/index.jade')(__ENV__);
+    return require('!!pug?pretty=true!./files/index.jade')(__ENV__);
   }
 
   ts() {
     if (!this.component) return '';
 
-    const ts = this.component.tsRaw
-                .replace(/selector: '(.*)'/, 'selector: \'my-app\'')
-                .replace(/template: require(.*)/, 'templateUrl: \'app/demo.html\',')
-                .replace(/class Demo(.*) {/, 'class AppComponent {');
-    return `${ts}`;
+    const { key } = this.component;
+
+    const raw = require('!!raw!../components/' + key + '/' + key + '.ts');
+    return raw.replace(/selector: '([^']+)'/, 'selector: \'my-app\'')
+              .replace(`'./${key}.html'`, '\'app/demo.html\'')
+              .replace(/class Demo(.*) \{/, 'class AppComponent {');
   }
 
   html() {
     if (!this.component) return '';
-    return this.component.htmlRaw;
+
+    const { key } = this.component;
+
+    const raw = require('!!raw!../components/' + key + '/' + key + '.html');
+    return raw;
   }
 
   lib() {

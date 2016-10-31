@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 
 @Component({
   selector: 'demo-picklist',
-  template: require('./picklist.html'),
+  templateUrl: './picklist.html',
 })
 export class DemoPicklist {
   multiple: boolean = true;

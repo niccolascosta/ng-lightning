@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 
 @Component({
   selector: 'demo-badges',
-  template: require('./badges.html'),
+  templateUrl: './badges.html',
 })
 export class DemoBadges {
 

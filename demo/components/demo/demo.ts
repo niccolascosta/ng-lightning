@@ -28,9 +28,7 @@ export interface IComponent {
   title?: string;
   readme?: string;
   html?: string;
-  htmlRaw?: string;
   ts?: string;
-  tsRaw?: string;
   api?: string;
 };
 
@@ -74,10 +72,6 @@ components.forEach(component => {
   if (!component.api) {
     component.api = require('./components/' + key + '/API.md').replace(/\{/g, `&#x007b;`).replace(/\}/g, `&#x007d;`);
   }
-
-  // Retrieve raw for live editing in plunker
-  component.htmlRaw = require('!!raw!./' + path + '.html');
-  component.tsRaw = require('!!raw!./' + path + '.ts');
 });
 
 

@@ -5,7 +5,7 @@ html
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1")
 
-    link(rel="stylesheet", href="https://unpkg.com/@salesforce-ux/design-system@#{pkg.devDependencies['@salesforce-ux/design-system']}/assets/styles/salesforce-lightning-design-system.min.css")
+    link(rel="stylesheet", href=`https://unpkg.com/@salesforce-ux/design-system@${pkg.devDependencies['@salesforce-ux/design-system']}/assets/styles/salesforce-lightning-design-system.min.css`)
     link(rel="stylesheet", href="styles.css")
 
     // 1. Load libraries
@@ -13,7 +13,7 @@ html
     script(src="https://unpkg.com/core-js/client/shim.min.js")
     script(src="https://unpkg.com/zone.js@0.6.25?main=browser")
     script(src="https://unpkg.com/systemjs@0.19.39/dist/system.src.js")
-      
+
     // Polyfills for IE
     script(type="text/javascript").
       var isIE11 = window.navigator.userAgent.indexOf('Trident/') > 0;
