@@ -3,7 +3,7 @@ import {NglBreadcrumb} from './breadcrumb';
 
 @Component({
  selector: 'ngl-breadcrumbs',
- templateUrl: './breadcrumbs.jade',
+ templateUrl: './breadcrumbs.pug',
  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NglBreadcrumbs {

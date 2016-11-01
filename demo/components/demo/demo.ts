@@ -1,30 +1,7 @@
 import {Component} from '@angular/core';
 
-import {DemoBadges} from './components/badges/badges';
-import {DemoBreadcrumbs} from './components/breadcrumbs/breadcrumbs';
-import {DemoButtons} from './components/buttons/buttons';
-import {DemoDatatables} from './components/datatables/datatables';
-import {DemoDatepickers} from './components/datepickers/datepickers';
-import {DemoForms} from './components/forms/forms';
-import {DemoIcons} from './components/icons/icons';
-import {DemoAvatars} from './components/images/images';
-import {DemoLookups} from './components/lookups/lookups';
-import {DemoMenus} from './components/menus/menus';
-import {DemoModals} from './components/modals/modals';
-import {DemoNotifications} from './components/notifications/notifications';
-import {DemoPaginations} from './components/paginations/paginations';
-import {DemoPick} from './components/pick/pick';
-import {DemoPicklist} from './components/picklist/picklist';
-import {DemoPills} from './components/pills/pills';
-import {DemoPopovers} from './components/popovers/popovers';
-import {DemoRatings} from './components/ratings/ratings';
-import {DemoSections} from './components/sections/sections';
-import {DemoSpinners} from './components/spinners/spinners';
-import {DemoTabs} from './components/tabs/tabs';
-
 export interface IComponent {
   key: string;
-  component: any;
   title?: string;
   readme?: string;
   html?: string;
@@ -32,28 +9,28 @@ export interface IComponent {
   api?: string;
 };
 
-export const components: any[] = [
-  { key: 'badges', component: DemoBadges },
-  { key: 'breadcrumbs', component: DemoBreadcrumbs },
-  { key: 'buttons', component: DemoButtons },
-  { key: 'datatables', component: DemoDatatables },
-  { key: 'datepickers', component: DemoDatepickers },
-  { key: 'forms', component: DemoForms },
-  { key: 'icons', component: DemoIcons },
-  { key: 'images', component: DemoAvatars },
-  { key: 'lookups', component: DemoLookups },
-  { key: 'menus', component: DemoMenus },
-  { key: 'modals', component: DemoModals },
-  { key: 'notifications', component: DemoNotifications },
-  { key: 'paginations', component: DemoPaginations },
-  { key: 'pick', component: DemoPick },
-  { key: 'picklist', component: DemoPicklist },
-  { key: 'pills', component: DemoPills },
-  { key: 'popovers', component: DemoPopovers },
-  { key: 'ratings', component: DemoRatings },
-  { key: 'sections', component: DemoSections },
-  { key: 'spinners', component: DemoSpinners },
-  { key: 'tabs', component: DemoTabs },
+export const components: IComponent[] = [
+  { key: 'badges' },
+  { key: 'breadcrumbs' },
+  { key: 'buttons' },
+  { key: 'datatables' },
+  { key: 'datepickers' },
+  { key: 'forms' },
+  { key: 'icons' },
+  { key: 'images' },
+  { key: 'lookups' },
+  { key: 'menus' },
+  { key: 'modals' },
+  { key: 'notifications' },
+  { key: 'paginations' },
+  { key: 'pick' },
+  { key: 'picklist' },
+  { key: 'pills' },
+  { key: 'popovers' },
+  { key: 'ratings' },
+  { key: 'sections' },
+  { key: 'spinners' },
+  { key: 'tabs' },
 ];
 
 components.forEach(component => {
@@ -75,13 +52,19 @@ components.forEach(component => {
 
 
 @Component({
-  template: require('./demo.jade')({ components }),
+  templateUrl: './demo.pug',
 })
 export class DemoRoute {
+  components = components;
+
   selectedTab: string[] = [];
 
   open(playground: any, key: string) {
     playground.open(this.getComponent(key));
+  }
+
+  getProp(key: string, prop: string) {
+    return this.getComponent(key)[prop];
   }
 
   private getComponent(key: string): IComponent {

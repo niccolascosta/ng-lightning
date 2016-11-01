@@ -6,7 +6,7 @@ import {uniqueId} from '../../util/util';
 
 @Component({
   selector: 'ngl-form-group-element',
-  templateUrl: './element.jade',
+  templateUrl: './element.pug',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NglFormGroupElement {

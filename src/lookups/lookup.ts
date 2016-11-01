@@ -15,7 +15,7 @@ import {uniqueId, isObject} from '../util/util';
 @Component({
   selector: 'ngl-lookup',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: './lookup.jade',
+  templateUrl: './lookup.pug',
   styles: [
     `.slds-dropdown__item--active > a {
         outline: 0;

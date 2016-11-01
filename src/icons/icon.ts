@@ -7,7 +7,7 @@ export type NglIconCategory = 'action' | 'custom' | 'doctype' | 'standard' | 'ut
 
 @Component({
   selector: 'ngl-icon, [ngl-icon]',
-  templateUrl: './icon.jade',
+  templateUrl: './icon.pug',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NglIcon {

@@ -3,7 +3,7 @@ import {Component, Input, Output, EventEmitter, ElementRef, Renderer, HostBindin
 @Component({
   selector: 'ngl-section',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: './section.jade',
+  templateUrl: './section.pug',
 })
 export class NglSection {
 

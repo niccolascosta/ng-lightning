@@ -5,7 +5,7 @@ export type NglInternalDate = { year: number, month: number, day: number, disabl
 
 @Component({
   selector: 'ngl-datepicker',
-  templateUrl: './datepicker.jade',
+  templateUrl: './datepicker.pug',
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
     'aria-hidden': 'false',

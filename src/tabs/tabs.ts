@@ -4,7 +4,7 @@ import {NglTab} from './tab';
 
 @Component({
   selector: 'ngl-tabs',
-  templateUrl: './tabs.jade',
+  templateUrl: './tabs.pug',
 })
 export class NglTabs {
   @Input() type: 'default' | 'scoped' = 'default';

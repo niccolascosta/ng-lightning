@@ -7,7 +7,7 @@ import {toBoolean} from '../util/util';
 @Component({
   selector: 'ngl-rating',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: './rating.jade',
+  templateUrl: './rating.pug',
   host: {
     'style': 'white-space: nowrap;',
     'tabindex': '0',

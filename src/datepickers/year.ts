@@ -2,7 +2,7 @@ import {Component, Input, Output, EventEmitter, ChangeDetectionStrategy} from '@
 
 @Component({
   selector: 'ngl-date-year',
-  templateUrl: './year.jade',
+  templateUrl: './year.pug',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NglDatepickerYear {

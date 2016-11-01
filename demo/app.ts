@@ -2,6 +2,11 @@ import {Component} from '@angular/core';
 
 @Component({
   selector: 'app',
-  template: require('./app.jade')(__ENV__),
+  templateUrl: './app.pug',
 })
-export class AppComp {}
+export class AppComp {
+
+  now = __ENV__.now;
+
+  version = __ENV__.version;
+}

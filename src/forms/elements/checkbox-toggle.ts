@@ -5,7 +5,7 @@ import {NglFormLabelTemplate} from '../form-label';
 
 @Component({
   selector: 'ngl-form-checkbox-toggle',
-  templateUrl: './checkbox-toggle.jade',
+  templateUrl: './checkbox-toggle.pug',
   changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [ {provide: NglFormElement, useExisting: NglFormElementCheckboxToggle} ],
   styles: [`:host { display: block; }`],

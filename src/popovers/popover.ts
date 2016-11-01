@@ -6,7 +6,7 @@ export type Direction = 'top' | 'right' | 'bottom' | 'left';
 @Component({
   selector: 'ngl-popover',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: './popover.jade',
+  templateUrl: './popover.pug',
 })
 export class NglPopover {
 

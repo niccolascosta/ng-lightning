@@ -6,7 +6,7 @@ export type NglPage = { number: number | string, disabled?: boolean };
 @Component({
   selector: 'ngl-pagination',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: './pagination.jade',
+  templateUrl: './pagination.pug',
   exportAs: 'nglPagination',
 })
 export class NglPagination implements OnChanges {

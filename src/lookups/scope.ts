@@ -3,7 +3,7 @@ import {NglLookupScopeItem} from './scope-item';
 
 @Component({
   selector: 'ngl-internal-lookup-scope',
-  templateUrl: './scope.jade',
+  templateUrl: './scope.pug',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NglInternalLookupScope {

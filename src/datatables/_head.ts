@@ -2,7 +2,7 @@ import {Component, ChangeDetectionStrategy, Input, Output, EventEmitter, HostBin
 
 @Component({
   selector: 'th[ngl-internal-datatatable-head]',
-  templateUrl: './_head.jade',
+  templateUrl: './_head.pug',
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
     'scope': 'col',

@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 
 @Component({
-  template: require('./support.jade')(),
+  templateUrl: './support.pug',
 })
 export class SupportComponent {}

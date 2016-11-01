@@ -15,7 +15,7 @@ export interface INglDatatableRowClick {
 
 @Component({
   selector: 'table[ngl-datatable]',
-  templateUrl: './datatable.jade',
+  templateUrl: './datatable.pug',
   host: {
     '[class.slds-is-relative]': 'loading',
   },

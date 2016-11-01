@@ -3,7 +3,7 @@ import {NglConfig, NglConfigurable} from '../config/config';
 
 @Component({
   selector: 'svg[nglIcon]',
-  templateUrl: './svg.jade',
+  templateUrl: './svg.pug',
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
     '[attr.aria-hidden]': 'true',

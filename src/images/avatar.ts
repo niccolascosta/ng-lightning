@@ -4,7 +4,7 @@ import {replaceClass} from '../util/util';
 @Component({
   selector: 'ngl-avatar',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: './avatar.jade',
+  templateUrl: './avatar.pug',
 })
 export class NglAvatar {
   @Input() src: string = '';

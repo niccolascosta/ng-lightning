@@ -5,7 +5,7 @@ import {NglModalHeaderTemplate} from './header';
 
 @Component({
   selector: 'ngl-modal',
-  templateUrl: './modal.jade',
+  templateUrl: './modal.pug',
   host: {
     'tabindex': '0',
   },

@@ -12,7 +12,7 @@ var bundle = require('./scripts/bundle');
 
 var PATHS = {
   src: ['src/**/*.ts','!src/**/*.spec.ts'],
-  templates: ['src/**/*.jade'],
+  templates: ['src/**/*.pug'],
   spec: ['src/**/*.ts', 'test/{util,mock}/*.ts'],
   temp: 'temp/',
   tsInline: 'temp/inline/',
@@ -31,7 +31,7 @@ var inlineTemplatesTask = lazypipe()
       });
       cb(null, rendered);
     },
-    templateExtension: '.jade',
+    templateExtension: '.pug',
   });
 
 gulp.task('clean', function() {

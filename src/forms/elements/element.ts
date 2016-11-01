@@ -5,7 +5,7 @@ import {NglFormLabelTemplate, getFormLabel} from '../form-label';
 
 @Component({
   selector: 'ngl-form-element',
-  templateUrl: './element.jade',
+  templateUrl: './element.pug',
   changeDetection: ChangeDetectionStrategy.OnPush,
   styles: [`:host { display: block; }`],
 })

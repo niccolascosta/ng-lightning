@@ -3,7 +3,7 @@ import {toBoolean} from '../util/util';
 
 @Component({
   selector: 'ngl-spinner',
-  templateUrl: './spinner.jade',
+  templateUrl: './spinner.pug',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NglSpinner {

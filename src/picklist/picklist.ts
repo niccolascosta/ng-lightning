@@ -6,7 +6,7 @@ import {toBoolean} from '../util/util';
 
 @Component({
   selector: 'ngl-picklist[nglPick]',
-  templateUrl: './picklist.jade',
+  templateUrl: './picklist.pug',
   changeDetection: ChangeDetectionStrategy.OnPush,
   styles: [`
     li.slds-is-active {

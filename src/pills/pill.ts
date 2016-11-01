@@ -2,7 +2,7 @@ import {Component, ChangeDetectionStrategy, ChangeDetectorRef, Output, EventEmit
 
 @Component({
   selector: 'ngl-pill',
-  templateUrl: './pill.jade',
+  templateUrl: './pill.pug',
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
     '[class.slds-pill]': 'true',

@@ -4,7 +4,7 @@ import {NglFormLabelTemplate, getFormLabel} from '../form-label';
 
 @Component({
   selector: 'fieldset[ngl-form-group]',
-  templateUrl: './group.jade',
+  templateUrl: './group.pug',
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
     '[class.slds-form-element]': 'true',

@@ -3,7 +3,7 @@ import {NglDatatableColumn} from './column';
 
 @Component({
   selector: 'td[ngl-internal-datatatable-cell]',
-  templateUrl: './_cell.jade',
+  templateUrl: './_cell.pug',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NglInternalDatatableCell {

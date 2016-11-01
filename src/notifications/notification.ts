@@ -4,7 +4,7 @@ import {replaceClass, isInt} from '../util/util';
 
 @Component({
   selector: 'ngl-notification',
-  templateUrl: './notification.jade',
+  templateUrl: './notification.pug',
   host: {
     '[class.slds-notify]': 'true',
     'role': 'alert',

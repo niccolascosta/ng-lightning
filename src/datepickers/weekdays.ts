@@ -2,7 +2,7 @@ import {Component, Input, ChangeDetectionStrategy} from '@angular/core';
 
 @Component({
   selector: 'tr[nglWeekdays]',
-  templateUrl: './weekdays.jade',
+  templateUrl: './weekdays.pug',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NglDatepickerWeekdays {

@@ -2,7 +2,7 @@ import {Component, Input, HostBinding, ChangeDetectionStrategy} from '@angular/c
 
 @Component({
   selector: 'td[nglDay]',
-  templateUrl: './day.jade',
+  templateUrl: './day.pug',
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
     'role': 'gridcell',
