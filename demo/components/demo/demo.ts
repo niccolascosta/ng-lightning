@@ -56,7 +56,6 @@ export const components: any[] = [
   { key: 'tabs', component: DemoTabs },
 ];
 
-const content = {};
 components.forEach(component => {
   const { key } = component;
   const path = 'components/' + key + '/' + key;
@@ -76,7 +75,7 @@ components.forEach(component => {
 
 
 @Component({
-  template: require('./demo.jade')({ content, components }),
+  template: require('./demo.jade')({ components }),
 })
 export class DemoRoute {
   selectedTab: string[] = [];
