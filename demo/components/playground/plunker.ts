@@ -10,7 +10,7 @@ export class Plunker {
 
   index() {
     if (!this.component) return '';
-    return require('!!pug?pretty=true!./files/index.pug')(__ENV__);
+    return require('!!pug?pretty=true!./files/index.pug')(process.env);
   }
 
   ts() {
@@ -38,7 +38,7 @@ export class Plunker {
   }
 
   systemjs() {
-    const libPath = __ENV__.production ? `npm:ng-lightning@${__ENV__.pkg.version}/bundles/ng-lightning.umd.js` : './ng-lightning.umd.js';
+    const libPath = process.env.production ? `npm:ng-lightning@${process.env.pkg.version}/bundles/ng-lightning.umd.js` : './ng-lightning.umd.js';
     return require('!!raw!./files/systemjs.config.js').replace('__NG_LIGHTHNING_URL__', libPath);
   }
 

@@ -6,7 +6,7 @@ import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 
 import {NglDemoModule} from './app.module';
 
-if (__ENV__.production) {
+if (process.env.production) {
   enableProdMode();
 }
 

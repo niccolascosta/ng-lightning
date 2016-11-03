@@ -6,7 +6,7 @@ import {Component} from '@angular/core';
 })
 export class AppComp {
 
-  now = __ENV__.now;
+  now = process.env.now;
 
-  version = __ENV__.version;
+  version = process.env.version;
 }

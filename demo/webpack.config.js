@@ -53,7 +53,7 @@ const config = {
       baseHref: isProduction ? '/ng-lightning/' : '/',
     }),
     new webpack.DefinePlugin({
-      __ENV__: JSON.stringify({
+      'process.env': JSON.stringify({
         now: dateFormat(new Date(), 'dd mmm yyyy'),
         version: pkg.version,
         production: isProduction,
