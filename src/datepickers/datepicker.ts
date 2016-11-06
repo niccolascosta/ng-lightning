@@ -45,8 +45,6 @@ export class NglDatepicker {
   uid = uniqueId('datepicker');
   monthLabel: string;
 
-  constructor() {}
-
   moveYear(year: string | number) {
     this.current.year = +year;
     this.render();
@@ -148,11 +146,11 @@ export class NglDatepicker {
   }
 
   private daysInPreviousMonth(year: number, month: number) {
-    const first = new Date(year, month, 1);
-    const offset = first.getDay();
+    const firstIndex = (new Date(year, month, 1)).getDay();
     const last = new Date(year, month, 0).getDate();
+    const numDays = (7 + firstIndex - this.firstDayOfWeek) % 7;
 
-    return this.getDayObjects(year, month - 1, last - offset + 1 + this.firstDayOfWeek, last, true);
+    return this.getDayObjects(year, month - 1, last - numDays + 1, last, true);
   }
 
   private daysInNextMonth(year: number, month: number, numOfDays: number) {

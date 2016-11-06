@@ -401,6 +401,33 @@ describe('`Datepicker` Component', () => {
       expect(getDayHeaders(fixture.nativeElement)).toEqual([ 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun' ]);
     });
   }));
+
+  it('should handle when first day of week is after first day of month', async(() => {
+    const fixture = createTestComponent(`<ngl-datepicker [date]="date" [firstDayOfWeek]="firstDayOfWeek" showToday="false"></ngl-datepicker>`, false);
+
+    fixture.componentInstance.firstDayOfWeek = 3;
+    expectCalendar(fixture, [
+      ['01', '02', '03', '04', '05', '06', '07'],
+      ['08', '09', '10', '11', '12', '13', '14'],
+      ['15', '16', '17', '18', '19', '20', '21'],
+      ['22', '23', '24', '25', '26', '27', '28'],
+      ['29', '*30+', '01-', '02-', '03-', '04-', '05-'],
+    ], 'September', '2010').then(() => {
+      expect(getDayHeaders(fixture.nativeElement)).toEqual([ 'Wed', 'Thu', 'Fri', 'Sat', 'Sun', 'Mon', 'Tue' ]);
+
+      fixture.componentInstance.firstDayOfWeek = 4;
+      expectCalendar(fixture, [
+        ['26-', '27-', '28-', '29-', '30-', '31-', '01'],
+        ['02', '03', '04', '05', '06', '07', '08'],
+        ['09', '10', '11', '12', '13', '14', '15'],
+        ['16', '17', '18', '19', '20', '21', '22'],
+        ['23', '24', '25', '26', '27', '28', '29'],
+        ['*30+', '01-', '02-', '03-', '04-', '05-', '06-'],
+      ], 'September', '2010').then(() => {
+        expect(getDayHeaders(fixture.nativeElement)).toEqual([ 'Thu', 'Fri', 'Sat', 'Sun', 'Mon', 'Tue', 'Wed' ]);
+      });
+    });
+  }));
 });
 
 
