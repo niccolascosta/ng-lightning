@@ -10,7 +10,7 @@
 
 This library contains native [Angular 2](https://angular.io/) components and directives written from scratch in TypeScript using the [Lightning Design System](https://www.lightningdesignsystem.com/) CSS framework.
 
-**This release is a developer preview.** We are looking for community help to find and fix bugs, improve demo site and create new components.
+We are looking for community help to find and fix bugs, improve demo site and create new components.
 
 ## Installation
 
@@ -39,7 +39,6 @@ Available on npm cdn [here](https://unpkg.com/svg4everybody).
 
 Typically, these shims should be placed within the `<head>` element.  
 
-**Note**: To prevent considerable rendering load in IE11, utilize `core-js` over `es6-shim`. See the [Angular 2 documentation](https://angular.io/docs/ts/latest/guide/npm-packages.html) for more information.
 
 ## Usage & Demo
 http://ng-lightning.github.io/ng-lightning/
