@@ -1,3 +1,20 @@
+<a name="1.0.0"></a>
+# [1.0.0](https://github.com/ng-lightning/ng-lightning/compare/v0.27.0...v1.0.0) (2016-11-07)
+
+
+### Bug Fixes
+
+* **datepicker:** correctly handle `firstDayOfWeek` as string attribute ([eab39df](https://github.com/ng-lightning/ng-lightning/commit/eab39df))
+* **datepicker:** handle when first day of week after first day of month ([3850150](https://github.com/ng-lightning/ng-lightning/commit/3850150))
+
+
+### Features
+
+* **datepicker:** support custom first day of week ([990783b](https://github.com/ng-lightning/ng-lightning/commit/990783b)), closes [#252](https://github.com/ng-lightning/ng-lightning/issues/252) [#255](https://github.com/ng-lightning/ng-lightning/issues/255)
+* **demo:** support AoT compilation ([b0f2f71](https://github.com/ng-lightning/ng-lightning/commit/b0f2f71)), closes [#262](https://github.com/ng-lightning/ng-lightning/issues/262)
+
+
+
 <a name="0.27.0"></a>
 # [0.27.0](https://github.com/ng-lightning/ng-lightning/compare/v0.26.0...v0.27.0) (2016-10-27)
 
