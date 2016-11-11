@@ -1,3 +1,13 @@
+<a name="1.0.1"></a>
+## [1.0.1](https://github.com/ng-lightning/ng-lightning/compare/v1.0.0...v1.0.1) (2016-11-11)
+
+
+### Bug Fixes
+
+* **app:** remove `[@types](https://github.com/types)/core-js` ([3c316a9](https://github.com/ng-lightning/ng-lightning/commit/3c316a9)), closes [#265](https://github.com/ng-lightning/ng-lightning/issues/265) [#267](https://github.com/ng-lightning/ng-lightning/issues/267)
+
+
+
 <a name="1.0.0"></a>
 # [1.0.0](https://github.com/ng-lightning/ng-lightning/compare/v0.27.0...v1.0.0) (2016-11-07)
 
