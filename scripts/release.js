@@ -81,14 +81,6 @@ function publish(version) {
   return deferred.promise;
 }
 
-function postVersion( version ) {
-  var deferred = q.defer();
-  bump(semver.inc(version, 'prerelease')).then(() => {
-    git.commit(`chore(release): starting new releace cycle`, [ packageFile ], deferred.resolve());
-  });
-  return deferred.promise;
-}
-
 function push() {
   return inquirer.prompt({
     type: 'confirm',
@@ -121,5 +113,4 @@ requestReleaseType(currentVersion)
 .then(preVersion)
 .then(runVersion, () => q.reject())
 .then(publish, () => q.reject())
-.then(postVersion)
 .then(push);
