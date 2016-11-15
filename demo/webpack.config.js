@@ -36,8 +36,8 @@ const config = {
           'angular2-router-loader' + (isProduction ? '?aot=true&genDir=demo' : '')
         ]
       },
-      { test: /\.html$/, loaders: ['raw'] },
-      { test: /\.md$/, loader: 'html?minimize=false!markdown' },
+      { test: /\.html$/, loaders: ['raw-loader'] },
+      { test: /\.md$/, loader: 'html-loader?minimize=false!markdown-loader' },
     ]
   },
   stats: 'minimal', // Only output when errors or new compilation happen
@@ -47,7 +47,7 @@ const config = {
       verbose: true,
     }),
     new HtmlWebpackPlugin({
-      template: '!!pug!' + path.resolve(__dirname, 'index.pug'),
+      template: '!!pug-loader!' + path.resolve(__dirname, 'index.pug'),
       baseHref: isProduction ? '/ng-lightning/' : '/',
     }),
     new webpack.DefinePlugin({

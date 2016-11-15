@@ -1,10 +1,10 @@
 import {Component, ElementRef} from '@angular/core';
 
-const index = require('!!pug?pretty=true!./files/index.pug')(process.env);
-const systemjs = require('!!raw!./files/systemjs.config.js').replace('__NG_LIGHTHNING_URL__',
+const index = require('!!pug-loader?pretty=true!./files/index.pug')(process.env);
+const systemjs = require('!!raw-loader!./files/systemjs.config.js').replace('__NG_LIGHTHNING_URL__',
                     process.env.production ? `npm:ng-lightning@${process.env.pkg.version}/bundles/ng-lightning.umd.js` : './ng-lightning.umd.js');
-const appMain = require('!!raw!./files/app/main.ts');
-const appModule = require('!!raw!./files/app/module.ts');
+const appMain = require('!!raw-loader!./files/app/main.ts');
+const appModule = require('!!raw-loader!./files/app/module.ts');
 
 @Component({
   selector: 'plunker',
@@ -32,7 +32,7 @@ export class Plunker {
   }
 
   // Uncomment this if you you want to test UMD bundle during development
-  lib = ''; // require('!!raw!ng-lightning/bundles/ng-lightning.umd.js');
+  lib = ''; // require('!!raw-loader!ng-lightning/bundles/ng-lightning.umd.js');
 
   open(component: any) {
     this.component = component;
