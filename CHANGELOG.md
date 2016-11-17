@@ -1,3 +1,14 @@
+<a name="1.0.2"></a>
+## [1.0.2](https://github.com/ng-lightning/ng-lightning/compare/v1.0.1...v1.0.2) (2016-11-17)
+
+
+### Bug Fixes
+
+* **config:** don’t try to unsubscribe if no subscription ([931496f](https://github.com/ng-lightning/ng-lightning/commit/931496f)), closes [#270](https://github.com/ng-lightning/ng-lightning/issues/270) [#271](https://github.com/ng-lightning/ng-lightning/issues/271)
+* **datatables:** correctly use `trackByKey` input ([ab754e7](https://github.com/ng-lightning/ng-lightning/commit/ab754e7)), closes [#268](https://github.com/ng-lightning/ng-lightning/issues/268) [#269](https://github.com/ng-lightning/ng-lightning/issues/269)
+
+
+
 <a name="1.0.1"></a>
 ## [1.0.1](https://github.com/ng-lightning/ng-lightning/compare/v1.0.0...v1.0.1) (2016-11-11)
 
