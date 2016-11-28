@@ -1,4 +1,4 @@
-import { Directive, Input, Output, EventEmitter, ElementRef, Renderer } from '@angular/core';
+import { Directive, Input, Output, EventEmitter} from '@angular/core';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import {toBoolean} from '../util/util';
 
@@ -24,8 +24,6 @@ export class NglPick {
   @Input('nglPickMultiple') set setIsMultiple(isMultiple: any) {
     this.isMultiple = toBoolean(isMultiple);
   }
-
-  constructor(public element: ElementRef, private renderer: Renderer) {}
 
   ngAfterContentInit() {
     this.values.next(this.selected);

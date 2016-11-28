@@ -1,9 +1,12 @@
-import {Component, Input, Output, EventEmitter, ElementRef, Renderer, HostBinding, ChangeDetectionStrategy} from '@angular/core';
+import {Component, Input, Output, EventEmitter, HostBinding, ChangeDetectionStrategy} from '@angular/core';
 
 @Component({
   selector: 'ngl-section',
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './section.pug',
+  host: {
+    '[class.slds-section]': 'true',
+  },
 })
 export class NglSection {
 
@@ -13,10 +16,6 @@ export class NglSection {
   @Input() open = false;
 
   @Output() openChange = new EventEmitter<boolean>();
-
-  constructor(private element: ElementRef, private renderer: Renderer) {
-    renderer.setElementClass(element.nativeElement, 'slds-section', true);
-  }
 
   toggle(event: Event) {
     event.preventDefault();

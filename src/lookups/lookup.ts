@@ -155,7 +155,7 @@ export class NglLookup implements OnChanges {
     return index < 0 ? null : `${this.inputId}_active_${index}`;
   }
 
-  pickActive(evt: KeyboardEvent) {
+  pickActive() {
     if (this.activeIndex < 0) return;
     this.handlePick(this.suggestions[this.activeIndex]);
   }

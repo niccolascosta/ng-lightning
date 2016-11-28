@@ -47,7 +47,7 @@ export class NglModal {
   private _open: boolean = true;
   private _directional = false;
 
-  constructor(private element: ElementRef, private renderer: Renderer) {}
+  constructor(private renderer: Renderer) {}
 
   @HostListener('keydown.esc', ['$event'])
   close(evt?: Event) {
