@@ -1,3 +1,18 @@
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/ng-lightning/ng-lightning/compare/v1.0.2...v1.1.0) (2016-11-29)
+
+
+### Bug Fixes
+
+* **popovers:** properly cleanup content passed as `TemplateRef` ([52687c9](https://github.com/ng-lightning/ng-lightning/commit/52687c9)), closes [#274](https://github.com/ng-lightning/ng-lightning/issues/274)
+
+
+### Features
+
+* **popovers:** expose `position` method ([00b1a74](https://github.com/ng-lightning/ng-lightning/commit/00b1a74)), closes [#273](https://github.com/ng-lightning/ng-lightning/issues/273)
+
+
+
 <a name="1.0.2"></a>
 ## [1.0.2](https://github.com/ng-lightning/ng-lightning/compare/v1.0.1...v1.0.2) (2016-11-17)
 
