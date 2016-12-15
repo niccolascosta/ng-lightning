@@ -1,6 +1,7 @@
 ### Build generated
 /demo/dist
 /demo/**/*.ngfactory.ts
+/demo/**/*.ngsummary.json
 /temp/
 /coverage/
 

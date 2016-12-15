@@ -1,4 +1,4 @@
-import {Directive, Input, TemplateRef, Output, EventEmitter} from '@angular/core';
+import {Directive, Input, TemplateRef, Output, EventEmitter, Optional} from '@angular/core';
 
 /*
  * <template ngl-tab heading="...">
@@ -17,7 +17,7 @@ export class NglTab {
 
   private _active: boolean = false;
 
-  constructor(public templateRef?: TemplateRef<any>) {}
+  constructor(@Optional() public templateRef: TemplateRef<any>) {}
 
   set active(active: boolean) {
     if (active ===  this._active) return;
