@@ -43,7 +43,7 @@ export class NglPicklist {
   @Input() dropdownListClass: any;
 
   @Input('filter') filterType: string | Function;
-  @Input() filterPlaceholder: string = 'custom';
+  @Input() filterPlaceholder: string = '';
 
   @Input() set open(value: boolean) {
     this._open = value;

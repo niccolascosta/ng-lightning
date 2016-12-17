@@ -3,7 +3,7 @@
     ng-content
     svg.slds-icon(nglIcon="down")
   .slds-dropdown.slds-dropdown--left([ngClass]="{ 'slds-p-top--none': hasFilter }")
-    input.slds-input(*ngIf="hasFilter", #filterInput, type="text", [placeholder]="filterPlaceholder", [ngModel]="filter", (ngModelChange)="filterChange($event)",
+    input.slds-input(*ngIf="hasFilter", #filterInput, type="text", [attr.placeholder]="filterPlaceholder", [ngModel]="filter", (ngModelChange)="filterChange($event)",
                     (keydown.enter)="onFilterPick()", (keydown.arrowdown)="setFilterActive(1, $event)", (keydown.arrowup)="setFilterActive(-1, $event)",
                     (focus)="onFilterFocus()", (blur)="onFilterBlur()")
     ul.dropdown__list(role="menu", [ngClass]="dropdownListClass")

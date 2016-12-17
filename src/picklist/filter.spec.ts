@@ -134,6 +134,33 @@ describe('Picklist filter', () => {
     fixture.detectChanges();
     expect(fixture.componentInstance.pick).toEqual([]);
   });
+
+  it('should show have empty placeholder by default', () => {
+    const fixture = createTestComponent(null, false);
+    fixture.componentInstance.open = true;
+    fixture.detectChanges();
+
+    const dropdownFilter = getDropdownFilter(fixture);
+    expect(dropdownFilter.placeholder).toBe('');
+  });
+
+  it('should show filter placeholder based on input', () => {
+    const fixture = createTestComponent(`
+      <ngl-picklist [data]="items" [(nglPick)]="pick" open="true" filter="value" [filterPlaceholder]="filterPlaceholder">
+        <template nglPicklistItem let-item>{{item.value}}</template>
+      </ngl-picklist>`);
+
+    const dropdownFilter = getDropdownFilter(fixture);
+    expect(dropdownFilter.placeholder).toBe('my placeholder');
+
+    fixture.componentInstance.filterPlaceholder = 'new custom';
+    fixture.detectChanges();
+    expect(dropdownFilter.placeholder).toBe('new custom');
+
+    fixture.componentInstance.filterPlaceholder = null;
+    fixture.detectChanges();
+    expect(dropdownFilter.placeholder).toBe('');
+  });
 });
 
 @Component({
@@ -150,6 +177,7 @@ export class TestComponent {
     { value: 'Item 2' },
     { value: 'Item 3' },
   ];
+  filterPlaceholder = 'my placeholder';
   open: boolean = false;
   openChange = jasmine.createSpy('openChange');
 }
