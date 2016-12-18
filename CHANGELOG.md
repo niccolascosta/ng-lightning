@@ -1,3 +1,20 @@
+<a name="1.2.0"></a>
+# [1.2.0](https://github.com/ng-lightning/ng-lightning/compare/v1.1.0...v1.2.0) (2016-12-18)
+
+
+### Bug Fixes
+
+* **picklist:** empty initial and handle falsy values of placeholder ([2ca807f](https://github.com/ng-lightning/ng-lightning/commit/2ca807f))
+
+
+### Features
+
+* **icons:** add waffle icon ([047f13d](https://github.com/ng-lightning/ng-lightning/commit/047f13d)), closes [#281](https://github.com/ng-lightning/ng-lightning/issues/281)
+* **lookups:** support custom header ([edfb316](https://github.com/ng-lightning/ng-lightning/commit/edfb316)), closes [#136](https://github.com/ng-lightning/ng-lightning/issues/136) [#286](https://github.com/ng-lightning/ng-lightning/issues/286)
+* **tabs:** configurable tab header capitalisation ([3513dbc](https://github.com/ng-lightning/ng-lightning/commit/3513dbc)), closes [#285](https://github.com/ng-lightning/ng-lightning/issues/285)
+
+
+
 <a name="1.1.0"></a>
 # [1.1.0](https://github.com/ng-lightning/ng-lightning/compare/v1.0.2...v1.1.0) (2016-11-29)
 
