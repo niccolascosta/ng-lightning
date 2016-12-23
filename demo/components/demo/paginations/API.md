@@ -8,6 +8,10 @@
   * `boundaryLinks?: boolean = false`: Whether to display First / Last buttons.
   * `boundaryNumbers?: number = 0`: Define how many of the first and last page numbers to always show.
   * `perPage?: number = 10`: Maximum number of items per page.
+  * `firstText?: string = 'First'`: Displayed string for First button.
+  * `previousText?: string = 'Previous'`: Displayed string for Previous button.
+  * `nextText?: string = 'Next'`: Displayed string for Next button.
+  * `lastText?: string = 'Last'`: Displayed string for Last button.
 
 ### Output
 
