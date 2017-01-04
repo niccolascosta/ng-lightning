@@ -93,11 +93,11 @@ gulp.task('build:watch', function() {
   gulp.watch([ PATHS.src, PATHS.templates ], gulp.series('ngc', 'bundle'));
 });
 
-gulp.task('demo:ngc:clean', function() {
-  return del(['demo/**/*.ngfactory.ts', 'temp/demo']);
+gulp.task('demo:clean', function() {
+  return del(['demo/**/*.ngfactory.ts', 'demo/**/*.ngsummary.json', 'demo/node_modules', 'temp/demo']);
 });
 
-gulp.task('demo:ngc', gulp.series('demo:ngc:clean', function __ngc(cb) {
+gulp.task('demo:ngc', gulp.series('demo:clean', function __ngc(cb) {
   exec(`${executable} -p ./demo/tsconfig-aot.json`, (e) => {
     if (e) console.log(e);
     cb();

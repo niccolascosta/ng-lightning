@@ -21,6 +21,7 @@
     "./support/support.module.ts"
   ],
   "angularCompilerOptions": {
+    "genDir": ".",
     "strictMetadataEmit": true
   }
 }

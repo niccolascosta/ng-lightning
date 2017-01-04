@@ -11,6 +11,11 @@
     "sourceMap": true,
     "noEmitOnError": true
   },
+  "exclude": [
+    "node_modules",
+    "main-aot.ts",
+    "components/playground/files"
+  ],
   "compileOnSave": false,
   "buildOnSave": false
 }

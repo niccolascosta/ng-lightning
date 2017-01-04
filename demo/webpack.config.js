@@ -31,9 +31,9 @@ const config = {
       {
         test: /\.ts$/,
         loaders: [
-          'awesome-typescript-loader?tsconfig=demo/tsconfig.json',
+          'awesome-typescript-loader?{configFileName: "demo/tsconfig.json"}',
           'angular2-template-loader',
-          'angular2-router-loader' + (isProduction ? '?aot=true&genDir=demo' : '')
+          'angular-router-loader' + (isProduction ? '?aot=true&genDir=demo' : '')
         ]
       },
       { test: /\.html$/, loaders: ['raw-loader'] },
@@ -41,6 +41,9 @@ const config = {
     ]
   },
   stats: 'minimal', // Only output when errors or new compilation happen
+  performance: {
+    hints: false,
+  },
   plugins: [
     new CleanWebpackPlugin([DEMO_DIST], {
       root: __dirname,
