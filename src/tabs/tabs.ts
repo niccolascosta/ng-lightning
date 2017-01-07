@@ -55,8 +55,13 @@ export class NglTabs {
   }
 
   private activate() {
+    if (this.activeTab) {
+      this.activeTab.active = false;
+    }
     this.activeTab = this.findTab();
-    this.tabs.forEach((t: NglTab) => t.active = (t === this.activeTab));
+    if (this.activeTab) {
+      this.activeTab.active = true;
+    }
   }
 
   private findTab(value: any = this.selected): NglTab {
