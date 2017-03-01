@@ -95,10 +95,13 @@ const config = {
 if (isProduction) {
   config.plugins.push(
     // Only emit files when there are no errors
-    new webpack.NoErrorsPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
 
     // Minify all javascript, switch loaders to minimizing mode
-    new webpack.optimize.UglifyJsPlugin()
+    new webpack.optimize.UglifyJsPlugin({
+      beautify: false,
+      comments: false,
+    })
   );
 }
 
