@@ -4,7 +4,6 @@ const dateFormat = require('dateformat');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const pkg = require('../package.json');
 
 /**
@@ -33,7 +32,7 @@ const config = {
         loaders: [
           'awesome-typescript-loader?{configFileName: "demo/tsconfig.json"}',
           'angular2-template-loader',
-          'angular-router-loader' + (isProduction ? '?aot=true&genDir=demo' : '')
+          'angular-router-loader' + (isProduction ? '?aot=true&genDir=.' : '')
         ]
       },
       { test: /\.html$/, loaders: ['raw-loader'] },
@@ -54,12 +53,11 @@ const config = {
       baseHref: isProduction ? '/ng-lightning/' : '/',
     }),
     new webpack.DefinePlugin({
-      'process.env': JSON.stringify({
-        now: dateFormat(new Date(), 'dd mmm yyyy'),
-        version: pkg.version,
+      'process.env': {
+        now: JSON.stringify(dateFormat(new Date(), 'dd mmm yyyy')),
+        version: JSON.stringify(pkg.version),
         production: isProduction,
-        pkg,
-      }),
+      },
     }),
     new CopyWebpackPlugin([
       { from: path.resolve(__dirname, '../node_modules/@salesforce-ux/design-system/assets'), to: 'assets' },
@@ -67,16 +65,6 @@ const config = {
       { from: path.resolve(__dirname, 'img'), to: 'img' },
       { from: path.resolve(__dirname, 'index.css') },
     ]),
-    new BrowserSyncPlugin({
-      host: '0.0.0.0',
-      port: 1111,
-      open: false,
-      server: {
-        baseDir: [DEMO_DIST]
-      },
-      reloadDelay: 100,
-      reloadDebounce: 300,
-    }),
 
     // Workaround needed for angular 2 angular/angular#11580
     new webpack.ContextReplacementPlugin(
@@ -91,6 +79,22 @@ const config = {
     }),
   ],
 };
+
+if (!isProduction) {
+  const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+  config.plugins.push(
+    new BrowserSyncPlugin({
+      host: '0.0.0.0',
+      port: 1111,
+      open: false,
+      server: {
+        baseDir: [DEMO_DIST]
+      },
+      reloadDelay: 100,
+      reloadDebounce: 300,
+    })
+  );
+}
 
 if (isProduction) {
   config.plugins.push(
