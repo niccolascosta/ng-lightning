@@ -1,3 +1,13 @@
+<a name="1.2.1"></a>
+## [1.2.1](https://github.com/ng-lightning/ng-lightning/compare/v1.2.0...v1.2.1) (2017-03-03)
+
+
+### Bug Fixes
+
+* **icons:** remove `xmlns:xlink` attribute from SVG ([5706cd5](https://github.com/ng-lightning/ng-lightning/commit/5706cd5))
+
+
+
 <a name="1.2.0"></a>
 # [1.2.0](https://github.com/ng-lightning/ng-lightning/compare/v1.1.0...v1.2.0) (2016-12-18)
 
