@@ -7,4 +7,9 @@
   <input type="hidden" name="files[app/module.ts]" [value]="appModule"/>
   <input *ngIf="localBundle" type="hidden" name="files[ng-lightning.umd.js]" [value]="lib"/>
   <input type="hidden" name="files[styles.css]" value="body { padding: 20px; }"/>
+  <input type="hidden" name="files[assets/icons/action-sprite/svg/symbols.svg]" [value]="actionSprite()"/>
+  <input type="hidden" name="files[assets/icons/custom-sprite/svg/symbols.svg]" [value]="customSprite()"/>
+  <input type="hidden" name="files[assets/icons/doctype-sprite/svg/symbols.svg]" [value]="doctypeSprite()"/>
+  <input type="hidden" name="files[assets/icons/standard-sprite/svg/symbols.svg]" [value]="standardSprite()"/>
+  <input type="hidden" name="files[assets/icons/utility-sprite/svg/symbols.svg]" [value]="utilitySprite()"/>
 </form>

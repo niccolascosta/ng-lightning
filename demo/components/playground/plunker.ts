@@ -31,6 +31,26 @@ export class Plunker {
     return this.component.html;
   }
 
+  actionSprite() {
+    return require('!!raw-loader!@salesforce-ux/design-system/assets/icons/action-sprite/svg/symbols.svg');
+  }
+
+  customSprite() {
+    return require('!!raw-loader!@salesforce-ux/design-system/assets/icons/custom-sprite/svg/symbols.svg');
+  }
+
+  doctypeSprite() {
+    return require('!!raw-loader!@salesforce-ux/design-system/assets/icons/doctype-sprite/svg/symbols.svg');
+  }
+
+  standardSprite() {
+    return require('!!raw-loader!@salesforce-ux/design-system/assets/icons/standard-sprite/svg/symbols.svg');
+  }
+
+  utilitySprite() {
+    return require('!!raw-loader!@salesforce-ux/design-system/assets/icons/utility-sprite/svg/symbols.svg');
+  }
+
   // Uncomment this if you you want to test UMD bundle during development
   lib = ''; // require('!!raw-loader!ng-lightning/bundles/ng-lightning.umd.js');
 
