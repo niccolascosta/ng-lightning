@@ -8,7 +8,7 @@
 
 [![Sauce Test Status](https://saucelabs.com/browser-matrix/ng-lightning.svg)](https://saucelabs.com/u/ng-lightning)
 
-This library contains native [Angular 2](https://angular.io/) components and directives written from scratch in TypeScript using the [Lightning Design System](https://www.lightningdesignsystem.com/) CSS framework.
+This library contains native [Angular](https://angular.io/) components and directives written from scratch in TypeScript using the [Lightning Design System](https://www.lightningdesignsystem.com/) CSS framework.
 
 We are looking for community help to find and fix bugs, improve demo site and create new components.
 
@@ -56,5 +56,5 @@ Development is supported by [ZuluTrade](http://zulutrade.com/).
 
 ## Browsers
 
-We support the same browsers and versions supported by both Angular 2 and Salesforce's Lightning Design System.  
+We support the same browsers and versions supported by both Angular and Salesforce's Lightning Design System.  
 Cross browser/environment testing is performed through [Saucelabs](https://saucelabs.com/).  
