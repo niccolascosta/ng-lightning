@@ -29,6 +29,16 @@ map: {
 }
 ```
 
+#### Dependencies
+This library depends on Salesforce's LDS markup and CSS. We don't ship any CSS file, but you have to take care of including LDS CSS rules in your page. There are various ways to achieve this, like compiling through their source files ([`@salesforce-ux/design-system`](https://github.com/salesforce-ux/design-system)) or by adding this into your `<head>`:
+
+```html
+<link rel="stylesheet" href="https://unpkg.com/@salesforce-ux/design-system/assets/styles/salesforce-lightning-design-system.min.css">
+```
+
+#### SVG Icons
+Because of various cross-domain issues, if you want to use SLDS icons, you must provide a copy of the various sprite files (ie `@salesforce-ux/design-system/assets/icons/action-sprite/svg/symbols.svg`), served locally through your server. Check our [webpack configuration](demo/webpack.config.js), to see how we achieve this for our demo page.
+
 #### IE11 support
 Unfortunately, IE11 does not support two important features.
 
