@@ -4,6 +4,7 @@
 /demo/**/*.ngsummary.json
 /temp/
 /coverage/
+/docs/
 
 ### Package manager generated
 node_modules
