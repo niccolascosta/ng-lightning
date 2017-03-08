@@ -60,7 +60,15 @@ const config = {
       },
     }),
     new CopyWebpackPlugin([
-      { from: path.resolve(__dirname, '../node_modules/@salesforce-ux/design-system/assets'), to: 'assets' },
+      { from: path.resolve(__dirname, '../node_modules/@salesforce-ux/design-system/assets/fonts'), to: 'assets/fonts' },
+      { from: path.resolve(__dirname, '../node_modules/@salesforce-ux/design-system/assets/images'), to: 'assets/images' },
+      { from: path.resolve(__dirname, '../node_modules/@salesforce-ux/design-system/assets/styles'), to: 'assets/styles' },
+      {
+        // SVG sprites
+        context: path.resolve(__dirname, '../node_modules/@salesforce-ux/design-system/assets/icons'),
+        from: '**/symbols.svg',
+        to: 'assets/icons',
+      },
       { from: path.resolve(__dirname, '../node_modules/prismjs/themes/prism-okaidia.css'), to: 'assets/prismjs' },
       { from: path.resolve(__dirname, 'img'), to: 'img' },
       { from: path.resolve(__dirname, 'index.css') },
