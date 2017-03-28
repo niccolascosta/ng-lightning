@@ -1,3 +1,20 @@
+<a name="1.3.0"></a>
+# [1.3.0](https://github.com/ng-lightning/ng-lightning/compare/v1.2.1...v1.3.0) (2017-03-28)
+
+
+### Bug Fixes
+
+* **picklist:** empty `filter` should filter based on value ([11832d2](https://github.com/ng-lightning/ng-lightning/commit/11832d2)), closes [#309](https://github.com/ng-lightning/ng-lightning/issues/309)
+
+
+### Features
+
+* **datatables:** support custom header classes per column ([04c24f4](https://github.com/ng-lightning/ng-lightning/commit/04c24f4)), closes [#299](https://github.com/ng-lightning/ng-lightning/issues/299) [#308](https://github.com/ng-lightning/ng-lightning/issues/308)
+* **images:** add figure component ([b6f5ab5](https://github.com/ng-lightning/ng-lightning/commit/b6f5ab5)), closes [#284](https://github.com/ng-lightning/ng-lightning/issues/284)
+* **popovers:** support header and footer ([3b9c3bd](https://github.com/ng-lightning/ng-lightning/commit/3b9c3bd)), closes [#313](https://github.com/ng-lightning/ng-lightning/issues/313)
+
+
+
 <a name="1.2.1"></a>
 ## [1.2.1](https://github.com/ng-lightning/ng-lightning/compare/v1.2.0...v1.2.1) (2017-03-03)
 
