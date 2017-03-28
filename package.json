@@ -35,9 +35,9 @@
   "author": "Tasos Bekos <tbekos@gmail.com>",
   "license": "MIT",
   "peerDependencies": {
-    "@angular/common": "^2.0.0",
-    "@angular/core": "^2.0.0",
-    "@angular/forms": "^2.0.0"
+    "@angular/common": ">=2.0.0",
+    "@angular/core": ">=2.0.0",
+    "@angular/forms": ">=2.0.0"
   },
   "dependencies": {
     "tether": "^1.2.0"
