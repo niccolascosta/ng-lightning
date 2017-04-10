@@ -12,11 +12,13 @@ function getPageElements(element: HTMLElement): HTMLButtonElement[] {
 
 function expectPages(element: HTMLElement, definitions: string[]): void {
   const activeClass = 'slds-button--brand';
+  const neutralClass = 'slds-button--neutral';
 
   const pages = getPageElements(element).map((el: HTMLButtonElement) => {
     let text = el.textContent.trim();
     if (el.classList.contains(activeClass)) {
       text = '+' + text;
+      expect(el.classList).not.toContain(neutralClass);
     }
     if (el.disabled) {
       text = '-' + text;
