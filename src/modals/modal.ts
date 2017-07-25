@@ -55,11 +55,6 @@ export class NglModal {
     this.openChange.emit(false);
   }
 
-  @HostListener('click', ['$event'])
-  stopPropagation(evt: Event) {
-    evt.stopPropagation();
-  }
-
   focusFirst() {
     this.closeButton.nativeElement.focus();
   }
