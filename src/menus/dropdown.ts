@@ -70,7 +70,9 @@ export class NglDropdown implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.clearGlobalClickTimeout();
-    this.openEventSubscription.unsubscribe();
+    if (this.openEventSubscription) {
+      this.openEventSubscription.unsubscribe();
+    }
     this._unsubscribeFromClickEvents();
   }
 
