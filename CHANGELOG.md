@@ -1,3 +1,24 @@
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/ng-lightning/ng-lightning/compare/v1.3.0...v2.0.0) (2017-08-17)
+
+
+### Bug Fixes
+
+* **dropdown:** sfae unsubscribe from open event ([330e66b](https://github.com/ng-lightning/ng-lightning/commit/330e66b))
+* **paginations:** remove neutral class on current page ([ab5bd47](https://github.com/ng-lightning/ng-lightning/commit/ab5bd47)), closes [#325](https://github.com/ng-lightning/ng-lightning/issues/325)
+
+
+### Features
+
+* **app:** support Angular v4 ([44b2c2a](https://github.com/ng-lightning/ng-lightning/commit/44b2c2a)), closes [#328](https://github.com/ng-lightning/ng-lightning/issues/328) [#331](https://github.com/ng-lightning/ng-lightning/issues/331)
+* **forms:** add checkbox add button component ([f5527bb](https://github.com/ng-lightning/ng-lightning/commit/f5527bb)), closes [#318](https://github.com/ng-lightning/ng-lightning/issues/318)
+
+### BREAKING CHANGES
+
+* ng-lightning requires a minimal version of Angular 4
+
+
+
 <a name="1.3.0"></a>
 # [1.3.0](https://github.com/ng-lightning/ng-lightning/compare/v1.2.1...v1.3.0) (2017-03-28)
 
