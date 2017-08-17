@@ -1,3 +1,8 @@
+<a name="2.0.1"></a>
+## [2.0.1](https://github.com/ng-lightning/ng-lightning/compare/v2.0.0...v2.0.1) (2017-08-17)
+
+
+
 <a name="2.0.0"></a>
 # [2.0.0](https://github.com/ng-lightning/ng-lightning/compare/v1.3.0...v2.0.0) (2017-08-17)
 
