@@ -74,6 +74,7 @@ describe('Lookup Component', () => {
 
     expect(input.value).toBe('');
     expect(input.placeholder).toBe('');
+    expect(input.getAttribute('autocomplete')).toBe('off');
     expect(pill).toBeFalsy();
 
     expectMenuExpanded(fixture.nativeElement, false);
