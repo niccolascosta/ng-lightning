@@ -50,10 +50,6 @@ export class NglDatatable {
 
   @ContentChild(NglDatatableNoRowsOverlay) noRowsOverlay: NglDatatableNoRowsOverlay;
 
-  get hasRows() {
-    return this.data && this.data.length > 0;
-  }
-
   @ContentChildren(NglDatatableColumn) columns: QueryList<NglDatatableColumn>;
 
   @Output() onRowClick = new EventEmitter<INglDatatableRowClick>();
