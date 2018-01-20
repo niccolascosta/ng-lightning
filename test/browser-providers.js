@@ -9,12 +9,12 @@ module.exports = {
     browserName: 'firefox',
     version: 'latest'
   },
-  'SL_Safari_9': {
-    base: 'SauceLabs',
-    browserName: 'safari',
-    platform: 'OS X 10.11',
-    version: '9'
-  },
+  // 'SL_Safari_9': {
+  //   base: 'SauceLabs',
+  //   browserName: 'safari',
+  //   platform: 'OS X 10.11',
+  //   version: '9'
+  // },
   'SL_Safari_10': {
     base: 'SauceLabs',
     browserName: 'safari',
