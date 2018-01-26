@@ -93,7 +93,7 @@ export class NglPopoverTrigger {
   }
 
   private toggle(open: boolean, delay: number) {
-    if (this.toggleTimeout) {
+    if (this.toggleTimeout !== null) {
       clearTimeout(this.toggleTimeout);
       this.toggleTimeout = null;
     }

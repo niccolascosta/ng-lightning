@@ -18,6 +18,7 @@
     "temp/inline/ng-lightning.ts"
   ],
   "angularCompilerOptions": {
+    "preserveWhitespaces": false,
     "strictMetadataEmit": true,
     "genDir": "./temp/waste"
   }
