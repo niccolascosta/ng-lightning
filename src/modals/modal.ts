@@ -1,7 +1,6 @@
-import {Component, Input, Output, ElementRef, EventEmitter, HostListener, ViewChild, ContentChild} from '@angular/core';
+import {Component, Input, Output, ElementRef, EventEmitter, HostListener, ViewChild, ContentChild, ChangeDetectionStrategy} from '@angular/core';
 import {toBoolean, uniqueId} from '../util/util';
-import {NglModalFooter} from './footer';
-import {NglModalHeaderTemplate} from './header';
+import {NglModalHeaderTemplate, NglModalFooterTemplate} from './templates';
 
 @Component({
   selector: 'ngl-modal',
@@ -9,10 +8,12 @@ import {NglModalHeaderTemplate} from './header';
   host: {
     'tabindex': '0',
   },
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NglModal {
   @Input() header: string = '';
-  @Input() size: 'large';
+
+  @Input() size: string;
 
   @Input() set directional(directional: string | boolean) {
     this._directional = toBoolean(directional);
@@ -38,11 +39,15 @@ export class NglModal {
     return this._open;
   }
 
+  get hasHeader() {
+    return this.header || this.headerTpl;
+  }
+
   @Output() openChange = new EventEmitter();
 
   @ContentChild(NglModalHeaderTemplate) headerTpl: NglModalHeaderTemplate;
 
-  @ContentChild(NglModalFooter) footer: NglModalFooter;
+  @ContentChild(NglModalFooterTemplate) footer: NglModalFooterTemplate;
 
   private _open: boolean = true;
   private _directional = false;

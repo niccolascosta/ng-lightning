@@ -4,3 +4,8 @@ import {Directive, TemplateRef} from '@angular/core';
 export class NglModalHeaderTemplate {
   constructor(public templateRef: TemplateRef<any>) {}
 }
+
+@Directive({ selector: '[nglModalFooter]' })
+export class NglModalFooterTemplate {
+  constructor(public templateRef: TemplateRef<any>) { }
+}

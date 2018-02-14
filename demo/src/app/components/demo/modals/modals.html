@@ -1,5 +1,4 @@
 <button type="button" nglButton="neutral" (click)="open()">Open modal</button>
-<button type="button" nglButton="neutral" (click)="open('large')">Open large</button>
 
 <ngl-modal [header]="noHeader ? '' : 'Modal Header'" [(open)]="opened" [size]="size" [directional]="directional">
   <div body>
@@ -7,18 +6,25 @@
     <p>Dolor eiusmod sunt ex incididunt cillum quis nostrud velit duis sit officia.</p>
     <p>Labore esse esse cupidatat amet velit id elit consequat minim ullamco mollit enim excepteur ea.</p>
   </div>
-  <ng-template ngl-modal-footer *ngIf="!noFooter">
-    <button class="slds-button slds-button--neutral" (click)="cancel()">Cancel</button>
-    <button class="slds-button slds-button--brand">Save</button>
+  <ng-template nglModalFooter *ngIf="!noFooter">
+    <button class="slds-button slds-button_neutral" (click)="cancel()">Cancel</button>
+    <button class="slds-button slds-button_brand">Save</button>
   </ng-template>
 </ngl-modal>
 
-<ngl-form-checkbox label="Empty header" class="slds-m-top--small">
+<ngl-form-checkbox label="Empty header" class="slds-m-top_small">
   <input nglFormControl type="checkbox" [(ngModel)]="noHeader" />
 </ngl-form-checkbox>
-<ngl-form-checkbox label="Empty footer" class="slds-m-top--small">
+<ngl-form-checkbox label="Empty footer" class="slds-m-top_small">
   <input nglFormControl type="checkbox" [(ngModel)]="noFooter" />
 </ngl-form-checkbox>
-<ngl-form-checkbox label="Directional footer" class="slds-m-top--small">
+<ngl-form-checkbox label="Directional footer" class="slds-m-top_small">
   <input nglFormControl type="checkbox" [(ngModel)]="directional" [disabled]="noFooter" />
 </ngl-form-checkbox>
+
+<div class="slds-text-title_caps slds-m-top_medium slds-m-bottom_small">Size</div>
+<div [(nglPick)]="size" nglPickActiveClass="slds-button_brand" class="slds-button-group " role="group">
+  <button type="button" nglPickOption="" nglButton="neutral">Default</button>
+  <button type="button" nglPickOption="medium" nglButton="neutral">Medium</button>
+  <button type="button" nglPickOption="large" nglButton="neutral">Large</button>
+</div>
