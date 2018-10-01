@@ -1,13 +1,9 @@
 {
   "name": "ng-lightning",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Native Angular components and directives for Lightning Design System",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ng-lightning/ng-lightning.git"
-  },
-  "bugs": {
-    "url": "https://github.com/ng-lightning/ng-lightning/issues"
+  "publishConfig": {
+    "registry": "https://artifactory.softplan.com.br/artifactory/api/npm/npm-local-unj/"
   },
   "main": "bundles/ng-lightning.umd.js",
   "module": "ng-lightning.js",
