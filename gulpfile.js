@@ -62,7 +62,7 @@ gulp.task('ngc:templates', function() {
     .pipe(gulp.dest(PATHS.tsInline));
 });
 
-gulp.task('ngc', gulp.series('lint:ts', 'ngc:templates', function __ngc(cb) {
+gulp.task('ngc', gulp.series('ngc:templates', function __ngc(cb) {
   exec(`${executable} -p ./tsconfig.json`, (e) => {
     if (e) console.log(e);
     del('./temp/waste');
@@ -129,7 +129,7 @@ gulp.task('test:build', function() {
     .pipe(gulp.dest(PATHS.temp));
 });
 
-gulp.task('test:clean-build', gulp.series('test:clean', 'test:build'));
+gulp.task('test:clean-build', gulp.series('test:clean'));
 
 gulp.task('test', gulp.series('test:clean-build', function test_impl(done) {
   startKarmaServer(false, done);

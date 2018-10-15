@@ -5,6 +5,10 @@ import {NglIcon} from './icon';
 import {NglIconSvg} from './svg';
 import {NglIconWaffle} from './waffle';
 
+export {NglIcon} from './icon';
+export {NglIconSvg} from './svg';
+export {NglIconWaffle} from './waffle';
+
 const NGL_ICON_DIRECTIVES = [
   NglIcon,
   NglIconSvg,

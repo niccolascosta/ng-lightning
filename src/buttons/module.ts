@@ -11,6 +11,10 @@ const NGL_BUTTON_DIRECTIVES = [
   NglButtonIcon,
 ];
 
+export {NglButton} from './button';
+export {NglButtonState} from './button-state';
+export {NglButtonIcon} from './button-icon';
+
 @NgModule({
   declarations: NGL_BUTTON_DIRECTIVES,
   exports: NGL_BUTTON_DIRECTIVES,

@@ -11,6 +11,9 @@ const NGL_DROPDOWN_DIRECTIVES = [
   NglDropdownItem,
 ];
 
+export {NglDropdownTrigger} from './dropdown-trigger';
+export {NglDropdown} from './dropdown';
+export {NglDropdownItem} from './dropdown-item';
 
 @NgModule({
   declarations: [NGL_DROPDOWN_DIRECTIVES],

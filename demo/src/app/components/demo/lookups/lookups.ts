@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {Observable} from 'rxjs/Observable';
-import 'rxjs/add/operator/map';
+import {Observable} from 'rxjs';
+import {map} from 'rxjs/internal/operators';
 
 @Component({
   selector: 'demo-lookups',
@@ -42,7 +42,7 @@ export class DemoLookups {
     }
 
     return this.http.get(`//maps.googleapis.com/maps/api/geocode/json?address=${query}`)
-      .map((response: any) => response.results);
+      .pipe(map((response: any) => response.results));
   }
 
   lookupPolymorphic = (query: string): string[] => {

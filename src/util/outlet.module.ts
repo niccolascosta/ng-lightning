@@ -3,6 +3,8 @@ import {CommonModule} from '@angular/common';
 
 import {NglInternalOutlet} from './outlet';
 
+export {NglInternalOutlet} from './outlet';
+
 @NgModule({
   imports: [CommonModule],
   declarations: [NglInternalOutlet],
